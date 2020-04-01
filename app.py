@@ -42,9 +42,13 @@ def handle_message(event):
     if msg in ["hi","HI"]:
         r = "喵嗚~"
     elif msg == "駕照":
-        r = "本喵問你幾歲~"
-    elif msg >= 18:
+        r = "有滿18歲喵~"
+    elif msg == "滿了":
         r = "要常帶喵喵出門喔"
+    elif msg == "大樂透"
+        lottery = []
+        lottery = (random.sample(range(1, 49), k=6))
+        r = lottery
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
