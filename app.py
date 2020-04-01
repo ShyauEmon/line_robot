@@ -43,8 +43,8 @@ def handle_message(event):
         r = "喵嗚~"
     elif msg == "駕照":
         r = "本喵問你幾歲~"
-        if msg >= 18:
-            r = "要常帶喵喵出門喔"
+    elif msg >= 18:
+        r = "要常帶喵喵出門喔"
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=r))
